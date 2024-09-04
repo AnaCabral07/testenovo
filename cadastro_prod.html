@@ -1,0 +1,1469 @@
+
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+04/09/2024 20:36:15 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1282, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inter:600italic,700,600,800,400|Jockey+One:400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/66d8c4620cbf95397a814994.66d8c4620cbf95397a814997.vgFn8dB.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --alto: #d9d9d9;
+  --black: #000000;
+  --salem: #0d7e2e;
+  --white: #ffffff;
+ 
+  --font-size-l: 25px;
+  --font-size-m: 20px;
+  --font-size-s: 17px;
+  --font-size-xl: 40px;
+  --font-size-xs: 16px;
+  --font-size-xxs: 12px;
+  --font-size-xxxs: 9px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-jockey_one: "Jockey One", Helvetica;
+}
+.inter-bold-black-12px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-normal-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-extra-bold-white-20px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.jockeyone-normal-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-jockey_one);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-normal-salem-17px {
+  color: var(--salem);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+/* screen - cadastro-de-produtos */
+
+.cadastro-de-produtos {
+  background-color: transparent;
+  height: 2480px;
+  overflow-x: hidden;
+  position: relative;
+  width: 1282px;
+}
+
+.cadastro-de-produtos .rectangle-1-9l6jeH {
+  background-color: transparent;
+  height: 2055px;
+  left: 0px;
+  position: absolute;
+  top: 84px;
+  width: 1282px;
+}
+
+.cadastro-de-produtos .rectangle-1350-9l6jeH {
+  background-color: #dbfedc;
+  height: 339px;
+  left: 2px;
+  position: absolute;
+  top: 2139px;
+  width: 1286px;
+}
+
+.cadastro-de-produtos .rectangle-1352-9l6jeH {
+  background-color: var(--alto);
+  height: 168px;
+  left: 706px;
+  position: absolute;
+  top: 1858px;
+  transform: rotate(0.15deg);
+  width: 192px;
+}
+
+.cadastro-de-produtos .image-267-9l6jeH {
+  background-color: transparent;
+  height: 150px;
+  left: 717px;
+  object-fit: cover;
+  position: absolute;
+  top: 1865px;
+  width: 170px;
+}
+
+.cadastro-de-produtos .rectangle-1353-9l6jeH {
+  background-color: var(--alto);
+  height: 168px;
+  left: 395px;
+  position: absolute;
+  top: 1855px;
+  transform: rotate(0.15deg);
+  width: 192px;
+}
+
+.cadastro-de-produtos .image-268-9l6jeH {
+  background-color: transparent;
+  height: 150px;
+  left: 406px;
+  object-fit: cover;
+  position: absolute;
+  top: 1862px;
+  width: 170px;
+}
+
+.cadastro-de-produtos .line-85-9l6jeH {
+  background-color: transparent;
+  height: 1px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: -1px;
+  width: 1283px;
+}
+
+.cadastro-de-produtos .title-9l6jeH {
+  background-color: transparent;
+  color: #0b6525;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 206px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 149px;
+  white-space: nowrap;
+  width: 344px;
+}
+
+.cadastro-de-produtos .line-62-9l6jeH {
+  background-color: transparent;
+  height: 10px;
+  left: 2px;
+  object-fit: cover;
+  position: absolute;
+  top: 475px;
+  width: 1284px;
+}
+
+.cadastro-de-produtos .rectangle-47-9l6jeH {
+  background-color: var(--alto);
+  height: 37px;
+  left: 195px;
+  position: absolute;
+  top: 615px;
+  width: 432px;
+}
+
+.cadastro-de-produtos .rectangle-50-9l6jeH {
+  background-color: var(--alto);
+  height: 37px;
+  left: 195px;
+  position: absolute;
+  top: 712px;
+  width: 433px;
+}
+
+.cadastro-de-produtos .rectangle-55-9l6jeH {
+  background-color: var(--alto);
+  height: 37px;
+  left: 683px;
+  position: absolute;
+  top: 712px;
+  width: 407px;
+}
+
+.cadastro-de-produtos .rectangle-56-9l6jeH {
+  background-color: var(--alto);
+  height: 37px;
+  left: 195px;
+  position: absolute;
+  top: 810px;
+  width: 433px;
+}
+
+.cadastro-de-produtos .rectangle-57-9l6jeH {
+  background-color: var(--alto);
+  height: 37px;
+  left: 683px;
+  position: absolute;
+  top: 810px;
+  width: 407px;
+}
+
+.cadastro-de-produtos .rectangle-48-9l6jeH {
+  background-color: var(--alto);
+  height: 37px;
+  left: 684px;
+  position: absolute;
+  top: 613px;
+  width: 406px;
+}
+
+.cadastro-de-produtos .nome-do-produto-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 194px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 579px;
+  width: 236px;
+}
+
+.cadastro-de-produtos .descrio-do-produto-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 683px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 768px;
+  width: 236px;
+}
+
+.cadastro-de-produtos .condio-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 195px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 769px;
+  width: 236px;
+}
+
+.cadastro-de-produtos .modelo-9l6jeH {
+  left: 684px;
+  top: 676px;
+  width: 172px;
+}
+
+.cadastro-de-produtos .data-da-compra-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 194px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 675px;
+  width: 172px;
+}
+
+.cadastro-de-produtos .marca-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 683px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 580px;
+  width: 172px;
+}
+
+.cadastro-de-produtos .line-68-9l6jeH {
+  background-color: transparent;
+  height: 13px;
+  left: 2px;
+  object-fit: cover;
+  position: absolute;
+  top: 906px;
+  width: 1284px;
+}
+
+.cadastro-de-produtos .rectangle-1343-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1069px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .preo-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1400px;
+  width: 170px;
+}
+
+.cadastro-de-produtos .descrio-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1492px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 169px;
+}
+
+.cadastro-de-produtos .rectangle-228-9l6jeH {
+  background-color: var(--alto);
+  height: 248px;
+  left: 491px;
+  position: absolute;
+  top: 1813px;
+  transform: rotate(0.15deg);
+  width: 283px;
+}
+
+.cadastro-de-produtos .insira-uma-ou-mais-imagens-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1768px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 318px;
+}
+
+.cadastro-de-produtos .nome-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1027px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 318px;
+}
+
+.cadastro-de-produtos .rectangle-1344-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1161px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .modelo-fB8Kq2 {
+  left: 217px;
+  top: 1119px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 318px;
+}
+
+.cadastro-de-produtos .rectangle-1345-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1261px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .estado-de-uso-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1219px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 318px;
+}
+
+.cadastro-de-produtos .rectangle-1346-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1353px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .ano-de-fabricao-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1311px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 318px;
+}
+
+.cadastro-de-produtos .rectangle-1348-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1537px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .informaes-do-vendedor-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1584px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 274px;
+}
+
+.cadastro-de-produtos .rectangle-1349-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1629px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .contato-9l6jeH {
+  left: 217px;
+  text-align: left;
+  top: 1670px;
+  transform: rotate(0.15deg);
+  white-space: nowrap;
+  width: 274px;
+}
+
+.cadastro-de-produtos .rectangle-1351-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1715px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .rectangle-1347-9l6jeH {
+  background-color: var(--alto);
+  height: 30px;
+  left: 217px;
+  position: absolute;
+  top: 1445px;
+  transform: rotate(0.15deg);
+  width: 871px;
+}
+
+.cadastro-de-produtos .rectangle-230-9l6jeH {
+  background-color: var(--salem);
+  height: 46px;
+  left: 517px;
+  position: absolute;
+  top: 2073px;
+  width: 225px;
+}
+
+.cadastro-de-produtos .anunciar-9l6jeH {
+  background-color: transparent;
+  color: #fefcfc;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 574px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2077px;
+  width: 184px;
+}
+
+.cadastro-de-produtos .image-163-9l6jeH {
+  background-color: transparent;
+  height: 220px;
+  left: 507px;
+  object-fit: cover;
+  position: absolute;
+  top: 1824px;
+  width: 252px;
+}
+
+.cadastro-de-produtos .rectangle-1221-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 124px;
+  left: 535px;
+  position: absolute;
+  top: 138px;
+  width: 213px;
+}
+
+.cadastro-de-produtos .rectangle-1222-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 124px;
+  left: 842px;
+  position: absolute;
+  top: 138px;
+  width: 213px;
+}
+
+.cadastro-de-produtos .rectangle-1223-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 124px;
+  left: 850px;
+  position: absolute;
+  top: 325px;
+  width: 213px;
+}
+
+.cadastro-de-produtos .rectangle-1224-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 124px;
+  left: 535px;
+  position: absolute;
+  top: 325px;
+  width: 213px;
+}
+
+.cadastro-de-produtos .rectangle-1220-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 124px;
+  left: 220px;
+  position: absolute;
+  top: 325px;
+  width: 213px;
+}
+
+.cadastro-de-produtos .image-192-9l6jeH {
+  height: 112px;
+  left: 863px;
+  top: 131px;
+  width: 112px;
+}
+
+.cadastro-de-produtos .image-192-fB8Kq2 {
+  height: 92px;
+  left: 547px;
+  top: 154px;
+  width: 95px;
+}
+
+.cadastro-de-produtos .image-192-DhGg5p {
+  height: 154px;
+  left: 210px;
+  top: 302px;
+  width: 130px;
+}
+
+.cadastro-de-produtos .image-192-MDKFsc {
+  height: 104px;
+  left: 863px;
+  top: 335px;
+  width: 96px;
+}
+
+.cadastro-de-produtos .smartphones-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 648px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 167px;
+  width: 100px;
+}
+
+.cadastro-de-produtos .notebooks-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 975px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 177px;
+  width: 100px;
+}
+
+.cadastro-de-produtos .fones-de-ouvido-e-headsets-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 949px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 344px;
+  width: 100px;
+}
+
+.cadastro-de-produtos .desktops-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 679px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 366px;
+  width: 100px;
+}
+
+.cadastro-de-produtos .t-vs-e-monitores-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 328px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 363px;
+  width: 100px;
+}
+
+.cadastro-de-produtos .correto-2-1-9l6jeH {
+  background-color: transparent;
+  height: 45px;
+  left: 698px;
+  object-fit: cover;
+  position: absolute;
+  top: 215px;
+  width: 45px;
+}
+
+.cadastro-de-produtos .line-143-9l6jeH {
+  background-color: transparent;
+  height: 2478px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 1px;
+}
+
+.cadastro-de-produtos .rectangle-1234-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 46px;
+  left: 491px;
+  position: absolute;
+  top: 954px;
+  width: 308px;
+}
+
+.cadastro-de-produtos .rectangle-1354-9l6jeH {
+  background-color: var(--salem);
+  border-radius: 20px;
+  height: 46px;
+  left: 356px;
+  position: absolute;
+  top: 518px;
+  width: 518px;
+}
+
+.cadastro-de-produtos .rectangle-1343-fB8Kq2 {
+  background-color: var(--salem);
+  height: 85px;
+  left: 2px;
+  position: absolute;
+  top: 0px;
+  width: 1282px;
+}
+
+.cadastro-de-produtos .rectangle-1344-fB8Kq2 {
+  background-color: var(--white);
+  border-radius: 1000px;
+  height: 31px;
+  left: 999px;
+  position: absolute;
+  top: 27px;
+  width: 196px;
+}
+
+.cadastro-de-produtos .clique-aqui-para-pesquisar-9l6jeH {
+  background-color: transparent;
+  color: #727272;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxs);
+  font-style: italic;
+  font-weight: 600;
+  height: auto;
+  left: 1015px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 36px;
+  width: 246px;
+}
+
+.cadastro-de-produtos .rectangle-1345-fB8Kq2 {
+  background-color: transparent;
+  height: 31px;
+  left: 1203px;
+  position: absolute;
+  top: 27px;
+  width: 58px;
+}
+
+.cadastro-de-produtos .navegao-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 1035px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 2176px;
+  width: 159px;
+}
+
+.cadastro-de-produtos .redes-sociais-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 727px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: darken;
+  position: absolute;
+  text-align: center;
+  top: 2175px;
+  width: 162px;
+}
+
+.cadastro-de-produtos .contato-fB8Kq2 {
+  left: 386px;
+  mix-blend-mode: darken;
+  text-align: center;
+  top: 2182px;
+  width: 162px;
+}
+
+.cadastro-de-produtos .fale-conosco-9l6jeH {
+  left: 418px;
+  top: 2305px;
+  width: 133px;
+}
+
+.cadastro-de-produtos .sustentechoficialgmailcom-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 418px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2268px;
+  width: 280px;
+}
+
+.cadastro-de-produtos .x13-91234-5678-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 418px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2227px;
+  width: 158px;
+}
+
+.cadastro-de-produtos .perguntas-frequentes-9l6jeH {
+  left: 418px;
+  top: 2339px;
+  width: 193px;
+}
+
+.cadastro-de-produtos .tiktok-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 817px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2317px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.cadastro-de-produtos .facebook-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 817px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2271px;
+  width: 92px;
+}
+
+.cadastro-de-produtos .instagram-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 817px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2227px;
+  width: 88px;
+}
+
+.cadastro-de-produtos .discord-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 817px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2369px;
+  width: 66px;
+}
+
+.cadastro-de-produtos .github-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 817px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2413px;
+  white-space: nowrap;
+  width: 104px;
+}
+
+.cadastro-de-produtos .anncio-9l6jeH {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 605px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 964px;
+  width: 236px;
+}
+
+.cadastro-de-produtos .image-260-9l6jeH {
+  background-color: transparent;
+  height: 128px;
+  left: 547px;
+  object-fit: cover;
+  position: absolute;
+  top: 322px;
+  width: 128px;
+}
+
+.cadastro-de-produtos .line-102-9l6jeH {
+  background-color: transparent;
+  height: 1px;
+  left: 2px;
+  object-fit: cover;
+  position: absolute;
+  top: 2138px;
+  width: 1285px;
+}
+
+.cadastro-de-produtos .line-149-9l6jeH {
+  background-color: transparent;
+  height: 1px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: 2478px;
+  width: 1287px;
+}
+
+.cadastro-de-produtos .line-144-9l6jeH {
+  background-color: transparent;
+  height: 2480px;
+  left: 1283px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 5px;
+}
+
+.cadastro-de-produtos .por-favor-responda-o-segunte-formulrio-9l6jeH {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 375px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 525px;
+  white-space: nowrap;
+  width: 522px;
+}
+
+.cadastro-de-produtos .image-269-9l6jeH {
+  background-color: transparent;
+  height: 242px;
+  left: 97px;
+  object-fit: cover;
+  position: absolute;
+  top: 2179px;
+  width: 194px;
+}
+
+.cadastro-de-produtos .image-270-9l6jeH {
+  background-color: transparent;
+  height: 39px;
+  left: 758px;
+  object-fit: cover;
+  position: absolute;
+  top: 2267px;
+  width: 39px;
+}
+
+.cadastro-de-produtos .image-271-9l6jeH {
+  background-color: transparent;
+  height: 39px;
+  left: 758px;
+  object-fit: cover;
+  position: absolute;
+  top: 2313px;
+  width: 39px;
+}
+
+.cadastro-de-produtos .image-272-9l6jeH {
+  background-color: transparent;
+  height: 40px;
+  left: 758px;
+  object-fit: cover;
+  position: absolute;
+  top: 2218px;
+  width: 39px;
+}
+
+.cadastro-de-produtos .image-273-9l6jeH {
+  background-color: transparent;
+  height: 36px;
+  left: 758px;
+  object-fit: cover;
+  position: absolute;
+  top: 2406px;
+  width: 36px;
+}
+
+.cadastro-de-produtos .image-274-9l6jeH {
+  background-color: transparent;
+  height: 27px;
+  left: 758px;
+  object-fit: cover;
+  position: absolute;
+  top: 2367px;
+  width: 36px;
+}
+
+.cadastro-de-produtos .do-utilizador-2-8-9l6jeH {
+  background-color: transparent;
+  height: 59px;
+  left: 33px;
+  object-fit: cover;
+  position: absolute;
+  top: 11px;
+  width: 60px;
+}
+
+.cadastro-de-produtos .pesquisa-de-lupa-2-2-9l6jeH {
+  background-color: transparent;
+  height: 23px;
+  left: 1220px;
+  object-fit: cover;
+  position: absolute;
+  top: 31px;
+  width: 23px;
+}
+
+.cadastro-de-produtos .seta-para-baixo-2-9l6jeH {
+  background-color: transparent;
+  height: 33px;
+  left: 937px;
+  object-fit: cover;
+  position: absolute;
+  top: 27px;
+  width: 42px;
+}
+
+.cadastro-de-produtos .fale-conosco-fB8Kq2 {
+  left: 556px;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.cadastro-de-produtos .locais-de-reciclagem-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 715px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.cadastro-de-produtos .sobre-ns-9l6jeH {
+  left: 429px;
+  top: 30px;
+  width: auto;
+}
+
+.cadastro-de-produtos .incio-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 112px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.cadastro-de-produtos .produtos-9l6jeH {
+  left: 196px;
+  top: 30px;
+  width: auto;
+}
+
+.cadastro-de-produtos .cadastro-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 312px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.cadastro-de-produtos .pgina-inicial-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 1068px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2218px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.cadastro-de-produtos .cadastre-se-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 1068px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2246px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.cadastro-de-produtos .cadastro-de-produtos-9l6jeH {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1069px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2274px;
+  white-space: nowrap;
+  width: 139px;
+}
+
+.cadastro-de-produtos .produtos-fB8Kq2 {
+  left: 1069px;
+  top: 2302px;
+  width: 88px;
+}
+
+.cadastro-de-produtos .sobre-ns-fB8Kq2 {
+  left: 1069px;
+  top: 2330px;
+  width: 88px;
+}
+
+.cadastro-de-produtos .fale-conosco-DhGg5p {
+  left: 1069px;
+  top: 2358px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.cadastro-de-produtos .sugestes-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 1069px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2386px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.cadastro-de-produtos .perguntas-frequentes-fB8Kq2 {
+  left: 1069px;
+  top: 2414px;
+  white-space: nowrap;
+  width: 139px;
+}
+
+.cadastro-de-produtos .locais-de-descarte-9l6jeH {
+  background-color: transparent;
+  height: auto;
+  left: 1069px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2442px;
+  white-space: nowrap;
+  width: 122px;
+}
+
+.cadastro-de-produtos .contato {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+}
+
+.cadastro-de-produtos .fale-conosco {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.cadastro-de-produtos .image-192 {
+  background-color: transparent;
+  object-fit: cover;
+  position: absolute;
+}
+
+.cadastro-de-produtos .modelo {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.cadastro-de-produtos .perguntas-frequentes {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.cadastro-de-produtos .produtos {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.cadastro-de-produtos .sobre-ns {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+</style></head><body style="margin: 0;"><input type="hidden" id="anPageName" name="page" value="cadastro-de-produtos"><div class="container-center-horizontal"><div class="cadastro-de-produtos screen " data-id="666:2"><img class="rectangle-1-9l6jeH" data-id="666:3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/rectangle-1.svg" alt="Rectangle 1"><div class="rectangle-1350-9l6jeH" data-id="666:4"></div><div class="rectangle-1352-9l6jeH" data-id="666:5"></div><img class="image-267-9l6jeH" data-id="666:6" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-267.png" alt="image 267"><div class="rectangle-1353-9l6jeH" data-id="666:7"></div><img class="image-268-9l6jeH" data-id="666:8" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-267.png" alt="image 268"><img class="line-85-9l6jeH" data-id="666:9" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/line-85.svg" alt="Line 85"><h1 class="title-9l6jeH" data-id="666:10">O que deseja cadastrar?</h1><img class="line-62-9l6jeH" data-id="666:11" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/line-62.svg" alt="Line 62"><div class="rectangle-47-9l6jeH" data-id="666:12"></div><div class="rectangle-50-9l6jeH" data-id="666:13"></div><div class="rectangle-55-9l6jeH" data-id="666:14"></div><div class="rectangle-56-9l6jeH" data-id="666:15"></div><div class="rectangle-57-9l6jeH" data-id="666:16"></div><div class="rectangle-48-9l6jeH" data-id="666:17"></div><div class="nome-do-produto-9l6jeH inter-normal-black-20px" data-id="666:18">Nome do produto:</div><div class="descrio-do-produto-9l6jeH inter-normal-black-20px" data-id="666:19">Descrição do produto:</div><div class="condio-9l6jeH inter-normal-black-20px" data-id="666:20">Condição:</div><div class="modelo-9l6jeH modelo inter-normal-black-20px" data-id="666:21">Modelo:</div><div class="data-da-compra-9l6jeH inter-normal-black-20px" data-id="666:22">Data da compra:</div><div class="marca-9l6jeH inter-normal-black-20px" data-id="666:23">Marca:</div><img class="line-68-9l6jeH" data-id="666:24" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/line-68.svg" alt="Line 68"><div class="rectangle-1343-9l6jeH" data-id="666:25"></div><div class="preo-9l6jeH inter-normal-black-20px" data-id="666:26">Preço:</div><div class="descrio-9l6jeH inter-normal-black-20px" data-id="666:27">Descrição:</div><div class="rectangle-228-9l6jeH" data-id="666:28"></div><p class="insira-uma-ou-mais-imagens-9l6jeH inter-normal-black-20px" data-id="666:29">Insira uma ou mais imagens:</p><div class="nome-9l6jeH inter-normal-black-20px" data-id="666:30">Nome</div><div class="rectangle-1344-9l6jeH" data-id="666:31"></div><div class="modelo-fB8Kq2 modelo inter-normal-black-20px" data-id="666:32">Modelo</div><div class="rectangle-1345-9l6jeH" data-id="666:33"></div><div class="estado-de-uso-9l6jeH inter-normal-black-20px" data-id="666:34">Estado de Uso</div><div class="rectangle-1346-9l6jeH" data-id="666:35"></div><div class="ano-de-fabricao-9l6jeH inter-normal-black-20px" data-id="666:36">Ano de Fabricação</div><div class="rectangle-1348-9l6jeH" data-id="666:37"></div><div class="informaes-do-vendedor-9l6jeH inter-normal-black-20px" data-id="666:38">Informações do vendedor:</div><div class="rectangle-1349-9l6jeH" data-id="666:39"></div><div class="contato-9l6jeH contato inter-normal-black-20px" data-id="666:40">Contato:</div><div class="rectangle-1351-9l6jeH" data-id="666:41"></div><div class="rectangle-1347-9l6jeH" data-id="666:42"></div><div class="rectangle-230-9l6jeH" data-id="666:43"></div><div class="anunciar-9l6jeH" data-id="666:44">Anunciar</div><img class="image-163-9l6jeH" data-id="666:45" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-267.png" alt="image 163"><div class="rectangle-1221-9l6jeH" data-id="666:46"></div><div class="rectangle-1222-9l6jeH" data-id="666:47"></div><div class="rectangle-1223-9l6jeH" data-id="666:48"></div><div class="rectangle-1224-9l6jeH" data-id="666:49"></div><div class="rectangle-1220-9l6jeH" data-id="666:50"></div><img class="image-192-9l6jeH image-192" data-id="666:51" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-192.png" alt="image 192"><img class="image-192-fB8Kq2 image-192" data-id="666:52" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-192-1.png" alt="image 192"><img class="image-192-DhGg5p image-192" data-id="666:53" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-192-2.png" alt="image 192"><img class="image-192-MDKFsc image-192" data-id="666:54" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-192-3.png" alt="image 192"><div class="smartphones-9l6jeH jockeyone-normal-white-16px" data-id="666:55">Smartphones</div><div class="notebooks-9l6jeH jockeyone-normal-white-16px" data-id="666:56">Notebooks</div><p class="fones-de-ouvido-e-headsets-9l6jeH jockeyone-normal-white-16px" data-id="666:57">Fones de ouvido e headsets</p><div class="desktops-9l6jeH jockeyone-normal-white-16px" data-id="666:58">Desktops</div><div class="t-vs-e-monitores-9l6jeH jockeyone-normal-white-16px" data-id="666:59">TVs e monitores</div><img class="correto-2-1-9l6jeH" data-id="666:60" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/correto--2--1.png" alt="correto (2) 1"><img class="line-143-9l6jeH" data-id="666:61" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/line-143.svg" alt="Line 143"><div class="rectangle-1234-9l6jeH" data-id="666:62"></div><div class="rectangle-1354-9l6jeH" data-id="666:63"></div><div class="rectangle-1343-fB8Kq2" data-id="666:64"></div><div class="rectangle-1344-fB8Kq2" data-id="666:65"></div><div class="clique-aqui-para-pesquisar-9l6jeH" data-id="666:66">Clique aqui para pesquisar</div><img class="rectangle-1345-fB8Kq2" data-id="666:67" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/rectangle-1345.svg" alt="Rectangle 1345"><div class="navegao-9l6jeH inter-normal-salem-17px" data-id="666:68">Navegação</div><div class="redes-sociais-9l6jeH inter-normal-salem-17px" data-id="666:69">Redes Sociais</div><div class="contato-fB8Kq2 contato inter-normal-salem-17px" data-id="666:70">Contato</div><div class="fale-conosco-9l6jeH fale-conosco inter-bold-black-12px" data-id="666:71">Fale Conosco</div><div class="sustentechoficialgmailcom-9l6jeH inter-bold-black-12px" data-id="666:72">sustentech.oficial@gmail.com</div><div class="x13-91234-5678-9l6jeH inter-bold-black-12px" data-id="666:73">(13) 91234-5678</div><div class="perguntas-frequentes-9l6jeH perguntas-frequentes inter-bold-black-12px" data-id="666:74">Perguntas Frequentes</div><div class="tiktok-9l6jeH inter-bold-black-12px" data-id="666:75">Tiktok</div><div class="facebook-9l6jeH inter-bold-black-12px" data-id="666:76">Facebook</div><div class="instagram-9l6jeH inter-bold-black-12px" data-id="666:77">Instagram</div><div class="discord-9l6jeH inter-bold-black-12px" data-id="666:78">Discord</div><div class="github-9l6jeH inter-bold-black-12px" data-id="666:79">Github</div><div class="anncio-9l6jeH" data-id="666:80">Anúncio:</div><img class="image-260-9l6jeH" data-id="666:81" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-260.png" alt="image 260"><img class="line-102-9l6jeH" data-id="666:82" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/line-102.svg" alt="Line 102"><img class="line-149-9l6jeH" data-id="666:83" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/line-149.svg" alt="Line 149"><img class="line-144-9l6jeH" data-id="666:84" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/line-144.svg" alt="Line 144"><p class="por-favor-responda-o-segunte-formulrio-9l6jeH" data-id="666:85">Por favor, responda o segunte formulário:</p><img class="image-269-9l6jeH" data-id="666:86" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-269.png" alt="image 269"><img class="image-270-9l6jeH" data-id="666:87" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-270.png" alt="image 270"><img class="image-271-9l6jeH" data-id="666:88" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-271.png" alt="image 271"><img class="image-272-9l6jeH" data-id="666:89" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-272.png" alt="image 272"><img class="image-273-9l6jeH" data-id="666:90" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-273.png" alt="image 273"><img class="image-274-9l6jeH" data-id="666:91" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/image-274.png" alt="image 274"><img class="do-utilizador-2-8-9l6jeH" data-id="666:92" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/do-utilizador--2--8.png" alt="do-utilizador (2) 8"><img class="pesquisa-de-lupa-2-2-9l6jeH" data-id="666:93" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/pesquisa-de-lupa--2--2.png" alt="pesquisa-de-lupa (2) 2"><img class="seta-para-baixo-2-9l6jeH" data-id="666:94" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/66d8c4640cbf95397a814999/releases/66d8c4bd3405585db4c23297/img/seta-para-baixo-2.png" alt="seta-para-baixo 2"><div class="fale-conosco-fB8Kq2 fale-conosco inter-extra-bold-white-20px" data-id="666:95">Fale Conosco</div><div class="locais-de-reciclagem-9l6jeH inter-extra-bold-white-20px" data-id="666:96">Locais de Reciclagem</div><div class="sobre-ns-9l6jeH sobre-ns inter-extra-bold-white-20px" data-id="666:97">Sobre Nós</div><div class="incio-9l6jeH inter-extra-bold-white-20px" data-id="666:98">Início</div><div class="produtos-9l6jeH produtos inter-extra-bold-white-20px" data-id="666:99">Produtos</div><div class="cadastro-9l6jeH inter-extra-bold-white-20px" data-id="666:100">Cadastro</div><div class="pgina-inicial-9l6jeH inter-bold-black-12px" data-id="666:101">Página Inicial</div><div class="cadastre-se-9l6jeH inter-bold-black-12px" data-id="666:102">Cadastre-se</div><a href="cadastro-de-produtos"><div class="cadastro-de-produtos-9l6jeH inter-bold-black-12px" data-id="666:103">Cadastro de Produtos</div></a><div class="produtos-fB8Kq2 produtos inter-bold-black-12px" data-id="666:104">Produtos</div><div class="sobre-ns-fB8Kq2 sobre-ns inter-bold-black-12px" data-id="666:105">Sobre Nós</div><div class="fale-conosco-DhGg5p fale-conosco inter-bold-black-12px" data-id="666:106">Fale Conosco</div><div class="sugestes-9l6jeH inter-bold-black-12px" data-id="666:107">Sugestões</div><div class="perguntas-frequentes-fB8Kq2 perguntas-frequentes inter-bold-black-12px" data-id="666:108">Perguntas Frequentes</div><div class="locais-de-descarte-9l6jeH inter-bold-black-12px" data-id="666:109">Locais de Descarte</div></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>
